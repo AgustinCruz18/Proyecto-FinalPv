@@ -68,7 +68,7 @@
                 <section sec:authorize="isAuthenticated()" th:unless="${puntoWithAvg.turistaRating}">
                     <form th:object="${valoracion}" th:action="@{addValoracion(puntoId=${punto.puntoId})}"
                           method="post">
-                        <input type="number" name="rate" th:field="*{rating}" min="0" max="5"/>
+                        <input required type="number" name="rate" th:field="*{rating}" min="0" max="5"/>
                         <button> Agregar valoración</button>
                     </form>
                 </section>
